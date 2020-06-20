@@ -7,8 +7,10 @@ GDFU is Python based script that will upload files on your Google Drive using Go
 3. Install Google Client Library  
 `pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`  
 4. Run main.py from from terminal/command prompt  
-#### Linux `python3 main.py`  
-#### Windows `py main.py`  
+#### Linux
+`python3 main.py`  
+#### Windows
+`py main.py`  
 
 GDFU will offer you three options:
 - Create folder
