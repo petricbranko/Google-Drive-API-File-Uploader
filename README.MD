@@ -7,4 +7,11 @@ GDFU will offer you three options:
 - Upload file
 - Upload all files
 
-![GDFU Commands](images/GDFU-Commands.png)
+#### Create folder
+Creates folder in Google Drive, also prints folder ID.
+#### Upload file
+Upload single file from 'uploads' folder
+#### Upload all files
+Upload all files from 'uploads' folder
+
+Note: Do not change name of 'uploads' folder!
