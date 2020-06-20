@@ -55,13 +55,23 @@ class fileUploader():
 
         print('File \033[92m ' + file_name + '\033[0m uploaded!')
 
+    def uploadAll(self, folder_id):
+        path = "./uploads"
+        self.folder_id = folder_id
+        print("\nUploading: ")
+
+        for file in os.listdir(path):
+            print(file)
+            fileUploader.uploadFile(file, folder_id)
+
 fileUploader = fileUploader()
 
 valid_input = False
 
 menu = """
 1. Create folder
-2. Upload file"""
+2. Upload file
+3. Upload all files from 'uploads' folder"""
 
 while not valid_input:
     print(menu)
@@ -71,8 +81,17 @@ while not valid_input:
         fileUploader.createFolder(input("Enter folder name: "))
         valid_input = True
     elif user_choice == "2":
-        fileUploader.uploadFile(input("Enter file name: "), input("Enter folder ID: "))
+        # Print all files from folder 'uploads'
+        print("\nFiles you can upload:")
+        path = "./uploads"
+        for file in os.listdir(path):
+            print(file)
+        fileUploader.uploadFile(input("\nEnter file name: "), input("Enter folder ID: "))
+        valid_input = True
+    elif user_choice == "3":
+        fileUploader.uploadAll(input("Enter folder ID: "))
         valid_input = True
     else:
         print("Invalid input, try again!")
         valid_input = False
+        
