@@ -25,3 +25,7 @@ Google Drive API will create 2 files:
 - token.pickle  
 
 These files will recognize you and allow you to access your Google Drive through GDFU.
+**Note:** Both files **must** be in google_auth directory!
+
+# License
+[MIT](https://github.com/petricbranko/Google-Drive-API-File-Uploader/blob/master/LICENSE)
