@@ -7,9 +7,10 @@ from google.auth.transport.requests import Request
 
 class fileUploader():
     def __init__(self):
+        # Permissions
         SCOPES = ['https://www.googleapis.com/auth/drive']
         creds = None
-
+        # Call API
         if os.path.exists('google_auth/token.pickle'):
             with open('google_auth/token.pickle', 'rb') as token:
                 creds = pickle.load(token)
@@ -86,6 +87,7 @@ while not valid_input:
         path = "./uploads"
         for file in os.listdir(path):
             print(file)
+
         fileUploader.uploadFile(input("\nEnter file name: "), input("Enter folder ID: "))
         valid_input = True
     elif user_choice == "3":
