@@ -24,7 +24,7 @@ Google Drive API will create 2 files:
 - credentials.json
 - token.pickle  
 
-These files will recognize you and allow you to access your Google Drive through GDFU.
+These files will recognize you and allow you to access your Google Drive through GDFU.  
 **Note:** Both files **must** be in google_auth directory!
 
 # License
